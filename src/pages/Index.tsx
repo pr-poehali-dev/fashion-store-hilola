@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
+import ProductCard from '@/components/ProductCard';
 
 export default function Index() {
   const [formData, setFormData] = useState({
@@ -25,6 +26,9 @@ export default function Index() {
               KHILOLA
             </a>
             <div className="hidden md:flex space-x-8">
+              <a href="#catalog" className="text-sm tracking-wide hover:text-accent transition-colors">
+                КАТАЛОГ
+              </a>
               <a href="#about" className="text-sm tracking-wide hover:text-accent transition-colors">
                 О БРЕНДЕ
               </a>
@@ -60,6 +64,57 @@ export default function Index() {
                 className="w-full h-[600px] object-cover shadow-2xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" className="py-32">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-heading font-light text-primary mb-4">
+              Избранные товары
+            </h2>
+            <p className="text-lg text-muted-foreground font-light">
+              Откройте для себя нашу коллекцию премиальной одежды и обуви
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <ProductCard 
+              name="Туфли на каблуке"
+              price="45 000 ₽"
+              image="https://cdn.poehali.dev/projects/c42e08c3-b245-4124-8089-5fcb1c8d0528/files/e82687e3-f784-49ca-9d4d-05be99889bb4.jpg"
+              category="ОБУВЬ"
+            />
+            <ProductCard 
+              name="Вечернее платье"
+              price="85 000 ₽"
+              image="https://cdn.poehali.dev/projects/c42e08c3-b245-4124-8089-5fcb1c8d0528/files/e1be941a-4d93-4889-a606-3078a0c682dd.jpg"
+              category="ОДЕЖДА"
+            />
+            <ProductCard 
+              name="Дизайнерская сумка"
+              price="95 000 ₽"
+              image="https://cdn.poehali.dev/projects/c42e08c3-b245-4124-8089-5fcb1c8d0528/files/ec4096c5-b335-4b22-9256-1faac57f558a.jpg"
+              category="АКСЕССУАРЫ"
+            />
+            <ProductCard 
+              name="Кашемировое пальто"
+              price="125 000 ₽"
+              image="https://cdn.poehali.dev/projects/c42e08c3-b245-4124-8089-5fcb1c8d0528/files/7c50c913-bd48-4bd5-ac0f-0c558a9e8349.jpg"
+              category="ОДЕЖДА"
+            />
+            <ProductCard 
+              name="Ботинки Chelsea"
+              price="55 000 ₽"
+              image="https://cdn.poehali.dev/projects/c42e08c3-b245-4124-8089-5fcb1c8d0528/files/6f00bee1-a52f-440f-a171-6182914a30e4.jpg"
+              category="ОБУВЬ"
+            />
+            <ProductCard 
+              name="Шёлковая блузка"
+              price="35 000 ₽"
+              image="https://cdn.poehali.dev/projects/c42e08c3-b245-4124-8089-5fcb1c8d0528/files/3cc2d835-c347-4612-8e62-79bbf723c214.jpg"
+              category="ОДЕЖДА"
+            />
           </div>
         </div>
       </section>
